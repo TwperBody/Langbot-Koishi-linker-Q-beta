@@ -2,6 +2,10 @@ import { Context, Schema } from 'koishi'
 
 import type Config from './config'
 import type get_mix from './message/get_msg'
+import type {log_msg, log_msg_object,log_back_acc,log_back_ruf} from './commands/log_msg'
+import type {get_config} from './commands/log_config'
+import type {get_next} from './line/try'
+import type {get_back} from './message/get_msg'
 
 export const Config: Schema<Config> = Schema.intersect([
   Schema.object({
@@ -10,7 +14,7 @@ export const Config: Schema<Config> = Schema.intersect([
       .default('本插件是用于连接Langbot的插件\n由于Langbot社区问题，部署问题请咨询langbot非官方社区\n本插件基于ob11协议，其他平台请使用其他版本\n谢谢支持')
       .description('介绍'),
   }).description('说明'),
-      
+       
   Schema.object({
       ports: Schema.number()
       .default(2280)
@@ -123,5 +127,5 @@ export const Config: Schema<Config> = Schema.intersect([
 ])
 
 export function apply(ctx: Context, config: Config) {
-  // write your plugin here
+  
 }

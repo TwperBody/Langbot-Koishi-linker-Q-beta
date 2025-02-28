@@ -1,8 +1,9 @@
-import { Context, Session, Schema } from 'koishi'
+import { Context, Session} from 'koishi'
 
 import type Config from '../config'
 
-function msg_mix(ctx: Context, kind: string, people: string, config: Config): any {
+function msg_mix(ctx: Context, people: string, config: Config): any {
+    let kind:string = config.choice
     ctx.on('message',(session: Session) =>{
         if(people == undefined){
             if(kind == 'OneBot_11'){

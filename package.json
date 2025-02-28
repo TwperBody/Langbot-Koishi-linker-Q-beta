@@ -1,0 +1,47 @@
+{
+  "name": "koishi-plugin-langbot-koishi-linker-q",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "contributors": [
+    "TwperBody <mcjiekejiemi@163.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TwperBody/Langbot-Koishi-linker-Q",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TwperBody/Langbot-Koishi-linker-Q"
+  },
+  "bugs": {
+    "url": "https://github.com/TwperBody/Langbot-Koishi-linker-Q/issues"
+  },
+  "keywords": [
+    "bot",
+    "chatbot",
+    "koishi",
+    "plugin",
+    "langbot",
+    "onebot"
+  ],
+  "koishi": {
+    "description": {
+      "zh": "将Langbot专AI框架接入koishi的Q专版本"
+    },
+    "service": {
+      "implements": [
+        "langbot"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@cordisjs/eslint-config": "^1.1.1",
+    "@koishijs/plugin-server": "^3.2.4"
+  },
+  "peerDependencies": {
+    "koishi": "^4.18.6"
+  }
+}
